@@ -10,28 +10,36 @@
 </head>
 <body>
 
-<nav>
-    <div class="serach container">
-        <row>
-        <input type="text" placeholder="Serach City" class="col-sm-3"></input>
-        <button type="submit" class="button-round dark">Serach</button>
-        </row>
-    </div>
-</nav>
-
 <div class="container-fluid">Weather Forecast
     <div class="row">
-        <div id="city" class="col-sm-12 col-md-4">City Search</div>
-        <div id="currentWeather" class="col-sm-12 col-md-8">Results</div>
+        <div id="city" class="col-sm-12 col-md-4">
+            <h2>Serach for a city:</h2>
+        </div>
+            <div class="serach container">    
+            <input type="text" placeholder="Serach City" class="col-sm-3"></input>
+            <button type="submit" class="btn button-round dark">Serach</button>
+            </div>
+        </div>
+</div>
+
+<div id="row justify-content-end">
+    <div id="currentWeather" class="col-sm-12 col-md-8 self-end">
+        <h2 id="cityName"></h2>
+        <p id="temp"></p>
+        <p id="wind"></p>
+        <p id="humidity"></p>
+        <p id="uv"></p>
     </div>
 </div>
+
 
 <div class="container-fluid">
     <div class="row justify-content-end">
-        <div id ="forecast" class="col-sm-8 self-end">5 Day forecast</div>
+        <div id ="forecast" class="col-sm-8">5 Day forecast</div>
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="./assets/script/script.js"></script>
 </body>
 </html>
