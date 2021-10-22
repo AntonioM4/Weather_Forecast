@@ -1,4 +1,4 @@
-var city = ''
+var cityNameEl = $('#cityName')
 var tempEl = $('#temp')
 var windEl = $('#wind')
 var humidityEl = $('#humidity')
@@ -16,31 +16,29 @@ function updateCity(city) {
             return response.json();
         })
         .then(function (data) {
-            var searchCriteria = '';
-            var weather = data;
-            var tempature = data.textContent
+            var cityName = data.name
             var lat = data.coord.lat;
             var lon = data.coord.lon;
-            var temp = data.main.temp;
-            var wind = data.wind.speed;
-            var humidity = data.main.humidity
-            tempEl.append(temp + ' °F')
-            windEl.append(wind + ' mph')
-            humidityEl.append(humidity + '%')
             latLon()
-            console.log(data)
+            
 
 
             function latLon() {
-                fetch('https:api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + WeatherAPIkey, {
+                fetch('https:api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + WeatherAPIkey + '&units=imperial', {
                 })
                     .then(function (response) {
                         return response.json();
                     })
                     .then(function (data) {
-                        var uv = data.current.uvi
-                        uvEl.append(uv)
-                        console.log(data)
+                        var temp = data.current.temp;
+                        var humidity = data.current.humidity;
+                        var uv = data.current.uvi;
+                        var wind = data.current.wind_speed;
+                        document.getElementById('cityName').innerHTML = (cityName);
+                        document.getElementById('temp').innerHTML = ('Temperature: ' + temp + ' °F');
+                        document.getElementById('wind').innerHTML = ('Wind Speed: ' + wind + ' mph');
+                        document.getElementById('humidity').innerHTML = ('Humidity: ' + humidity + '%');
+                        document.getElementById('uv').innerHTML = ('UVI: ' + uv);
                     })
         }
     })
