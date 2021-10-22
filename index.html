@@ -13,49 +13,44 @@
 
 <body>
 
-    <div class="container-fluid">Weather Dashboard
+    <div class="container-fluid">
         <div class="row">
-            <div id="city" class="col-sm-12 col-md-4">
-                <h2>Serach for a city:</h2>
-            </div>
-            <div class='container-fluid'>
-                <div class='row'>
-                    <div class='col-md-2'>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2">
                         <h1 id="top">Weather</h1>
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
                                 <p class="card-text">Find the weather in your region</p>
-                                <input type='text' class='getCity' placeholder='Select A City' aria-label='City' value=' '>
-                                <button type='button' onclick='getCity()' class='btn btn-secondary searchButton'>Search</button>
+                                <input type="text" class="getCity" placeholder="Select A City" aria-label="City"
+                                    value=" ">
+                                <button type="button" onclick="getCity()"
+                                    class="btn btn-secondary searchButton">Search</button>
                             </div>
                         </div>
                     </div>
 
-            <div id="row justify-content-end">
-                <div id="currentWeather" class="col-sm-12 col-md-8 self-end">
-                    <h2 id="cityName"></h2>
-                    <p id="temp"></p>
-                    <p id="wind"></p>
-                    <p id="humidity"></p>
-                    <p id="uv"></p>
-                </div>
-            </div>
+                    <div id="row justify-content-end">
+                        <div id="currentWeather" class="col-sm-12 col-md-8 self-end">
+                            <h2 id="cityName"></h2>
+                            <p id="temp"></p>
+                            <p id="wind"></p>
+                            <p id="humidity"></p>
+                            <p id="uv"></p>
+                        </div>
+                    </div>
 
-            <div class="container-fluid">
-                <div class="row justify-content-end">
-                    <div id="forecast" class="col-sm-8">
-                        <h3>5 Day Forecast:</h3>
-                        <card>Day 1</card>
-                        <card>Day 2</card>
-                        <card>Day 3</card>
-                        <card>Day 4</card>
-                        <card>Day 5</card>
+                    <div class="container-fluid">
+                        <div class="row justify-content-end">
+                            <div id="dailyForecast" class="col-sm-8">
+                                <h3>5 Day Forecast:</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-            <script src="./assets/script/script.js"></script>
+                    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                    <script src="./assets/script/script.js"></script>
 </body>
 
 </html>

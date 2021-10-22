@@ -2,8 +2,16 @@ var cityNameEl = $('#cityName')
 var tempEl = $('#temp')
 var windEl = $('#wind')
 var humidityEl = $('#humidity')
-var uvEl =$('#uv')
+var uvEl = $('#uv')
 var WeatherAPIkey = 'c8426401a16cc79bc8d7d5541a0f8741';
+
+
+
+
+
+
+
+
 function getCity() {
     city = document.querySelector('.getCity').value;
     updateCity(city);
@@ -19,8 +27,10 @@ function updateCity(city) {
             var cityName = data.name
             var lat = data.coord.lat;
             var lon = data.coord.lon;
-            latLon()
-            
+            console.log(data)
+            latLon();
+            dailyForecast();
+
 
 
             function latLon() {
@@ -39,7 +49,14 @@ function updateCity(city) {
                         document.getElementById('wind').innerHTML = ('Wind Speed: ' + wind + ' mph');
                         document.getElementById('humidity').innerHTML = ('Humidity: ' + humidity + '%');
                         document.getElementById('uv').innerHTML = ('UVI: ' + uv);
+                        console.log(dateEl)
+                        console.log(data)
                     })
-        }
-    })
+            }
+
+
+            function dailyForecast() {
+
+            }
+        })
 }
