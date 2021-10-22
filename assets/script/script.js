@@ -49,7 +49,6 @@ function updateCity(city) {
                         document.getElementById('wind').innerHTML = ('Wind Speed: ' + wind + ' mph');
                         document.getElementById('humidity').innerHTML = ('Humidity: ' + humidity + '%');
                         document.getElementById('uv').innerHTML = ('UVI: ' + uv);
-                        console.log(dateEl)
                         console.log(data)
                     })
             }
